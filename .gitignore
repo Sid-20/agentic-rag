@@ -1,0 +1,143 @@
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.python-version
+
+# ==========================================
+# Virtual Environments
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+
+langgraph_rag/
+
+# ==========================================
+# Environment Variables
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# FastAPI
+# ==========================================
+*.log
+logs/
+*.pid
+
+# Uvicorn
+uvicorn.log
+
+# ==========================================
+# LangGraph / LangChain
+# ==========================================
+
+# Local checkpoint databases
+checkpoints.db
+*.sqlite
+*.sqlite3
+
+# LangGraph storage
+.langgraph/
+.langsmith/
+
+# Local vector stores
+chroma/
+chromadb/
+faiss_index/
+vectorstore/
+
+# ==========================================
+# Uploads / Generated Files
+# ==========================================
+uploads/
+tmp/
+temp/
+cache/
+
+# ==========================================
+# Testing
+# ==========================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+.hypothesis/
+
+# ==========================================
+# Jupyter
+# ==========================================
+.ipynb_checkpoints/
+
+# ==========================================
+# IDEs
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+*.shm
+# ==========================================
+# Build / Distribution
+# ==========================================
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ==========================================
+# Package Managers
+# ==========================================
+poetry.lock
+Pipfile.lock
+
+# Uncomment if using uv
+# uv.lock
+
+# ==========================================
+# OS Files
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Secrets
+# ==========================================
+*.pem
+*.key
+*.crt
+*.p12
+secrets/
+credentials.json
+service-account.json
+
+# ==========================================
+# Local Databases
+# ==========================================
+*.db
+*.db-journal
+
+# ==========================================
+# Docker
+# ==========================================
+docker-compose.override.yml
+
+# ==========================================
+# Coverage Reports
+# ==========================================
+coverage.xml
+*.cover
