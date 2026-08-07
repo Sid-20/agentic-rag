@@ -12,5 +12,5 @@ class LLM_Chain:
         self.llm=self.llm.bind_tools(tools)
 
     def get_llm_chain_response(self, prompt : str ,values : dict):
-        chain = prompt | self.llm #| self.parser 
+        chain = prompt | self.llm | self.parser 
         return chain.invoke(values)

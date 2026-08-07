@@ -37,7 +37,12 @@ def get_job_search(query:str ,country:str, num_pages:str=1 , date_posted:str="al
     url = f"{main_url}/search-v2"
 
     querystring = {"query":query,"num_pages":num_pages,"country":country,"date_posted":date_posted}
+
+    print(f"---QUERY  STRING---{querystring}")
+
     response = requests.get(url, headers=headers, params=querystring)
+
+    print(f"-----JOB SEARCH TOOL CALLED-----")
 
     print(response.json())
     return response.json()
@@ -64,9 +69,11 @@ def get_details_of_job(job_id:str,country:str="us"):
 
     querystring = {"job_id":job_id,"country":country}
 
+    print(f"---QUERY  STRING---{querystring}")
+
     response = requests.get(url, headers=headers, params=querystring)
 
-    print(response.json())
+    print(f"-----GET DETAILS OF JOB TOOL CALLED-----")
     return response.json()
 
 
@@ -95,11 +102,13 @@ def get_salary_job_by_title(job_title:str,location:str,location_type:str,years_o
 
     url = f"{main_url}/estimated-salary"
 
+    print(f"---QUERY  STRING---{querystring}")
+
     querystring = {"job_title":job_title,"location":location,"location_type":location_type,"years_of_experience":years_of_experience}
 
     response = requests.get(url, headers=headers, params=querystring)
 
-    print(response.json())
+    print(f"-----SALARY BY JOB TOOL CALLED-----")
     return response.json()
 
 
@@ -132,9 +141,11 @@ def get_salary_by_company(company:str ,job_title:str,location_type:str="ANY",yea
 
     querystring = {"company":company,"job_title":job_title,"location_type":location_type,"years_of_experience":years_of_experience}
 
+    print(f"---QUERY  STRING---{querystring}")
+
     response = requests.get(url, headers=headers, params=querystring)
 
-    print(response.json())
+    print(f"-----SALARY BY COMPANY TOOL CALLED-----")
     return response.json()
 
 
